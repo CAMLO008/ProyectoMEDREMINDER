@@ -1,0 +1,215 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="PaginaWebClinina.Home" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="es" />
+    <title>MEDREMINDER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <link href="jAlert/jquery.alerts.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="img/clinica_318-1538.jpg" />
+    <link href="css/footer.css" rel="stylesheet" />
+    <!-- DataTables -->
+    <link href="css/datatables/dataTables.bootstrap.css" rel="stylesheet" />
+     <style>
+        /* Cambiar la parte superior a morado */
+        .skin-blue .main-header {
+            background-color: #6a4c9c !important; /* Morado */
+        }
+
+        .skin-blue .main-header .logo {
+            background-color: #6a4c9c !important; /* Morado en el logo */
+        }
+
+        .skin-blue .navbar {
+            background-color: #6a4c9c !important; /* Barra de navegación morada */
+        }
+
+        /* Cambiar los iconos de la barra de navegación */
+        .skin-blue .navbar .sidebar-toggle {
+            background-color: #6a4c9c !important; /* Color morado en el icono de toggle */
+        }
+
+        .skin-blue .navbar-right > .dropdown > .user-menu > a {
+            color: #ffffff !important; /* Asegura que el texto del botón sea blanco */
+        }
+
+        .skin-blue .navbar-right .user-menu > .dropdown-menu {
+            background-color: #6a4c9c !important; /* Fondo morado para el dropdown */
+        }
+
+        /* Cambiar los iconos de las barras */
+        .icon-bar {
+            background-color: #6a4c9c !important; /* Barras moradas para el toggle */
+        }
+        .skin-blue .logo {
+            background-color: #5e3d92; /* Morado */
+        }
+
+    /* También puedes cambiar el color al pasar el ratón sobre el logo (hover) */
+    .skin-blue .logo:hover {
+        background-color: #4b2e6d; /* Un tono morado más oscuro al pasar el ratón */
+    }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="skin-blue">
+    <header class="header">
+        <!-- BEGIN CABECERA -->
+        <a href="#" class="logo">MEDREMINDER</a>
+        <nav class="navbar navbar-static-top" role="navigation">
+            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu">
+                        <a>
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span id="close">Cerrar Sesión</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- END CABECERA-->
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <aside class="left-side sidebar-offcanvas">
+            <section class="sidebar">
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="img/usuario.jpg" class="img-circle" alt="User Image" />
+                    </div>
+                    <div class="pull-left info">
+                        <p>Bienvenido sr(a)</p>
+                        <a href="#"><i class="fa fa-circle text-success"></i>En linea</a>
+                        <br />
+                        <p>
+                            <asp:Label runat="server" ID="txtUser"></asp:Label>
+                        </p>
+                    </div>
+                </div>
+               
+                <ul class="sidebar-menu">
+                    <% if (Session["UserSessionEmpleado"] != null)
+                        {
+                            var objEmpleado = (CapaEntidades.Usuario)Session["UserSessionEmpleado"];
+                           // var objEmpleado = Convert.ToInt32(idEmpleado.Value);
+
+                            var DMenu = CapaLogicaNegocio.MenuLN.getInstance().ListarMenuPorEmpleado(objEmpleado.ID);
+                            Session["Permisos"] = DMenu;
+                            foreach (CapaEntidades.Menu menu in DMenu.PMenu)
+                            {
+                                if (menu.Estado)
+                                {
+                                    if (menu.SubMenu.Count == 0)
+                                    {
+                    %>
+                    <li>
+                        <a href='<%=menu.Url%>'>
+                            <i class="fa fa-th"></i>
+                            <span><%= menu.Nombre %></span>
+                        </a>
+                    </li>
+                    <%
+                        }
+                        else
+                        {
+                    %>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span><%= menu.Nombre %></span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <%
+                                foreach (CapaEntidades.Menu submenu in menu.SubMenu)
+                                {
+                                    if (submenu.Estado && submenu.Show)
+                                    {
+
+                            %><li>
+                                <a href='<%=submenu.Url%>'><i class="fa fa-angle-double-right"></i><%=submenu.Nombre%></a>
+                            </li>
+                            <%
+
+                                    }
+                                }
+                            %>
+                        </ul>
+                    </li>
+                    <%
+                                    }
+                                }
+                            }
+                        }
+                    %>
+                </ul>
+            </section>
+        </aside>
+        <aside class="right-side">
+            <section class="content-header">
+                <h1 style="font-weight: bold">
+                    <asp:Label ID="lblOpcionMenu" runat="server" Text="Panel General"></asp:Label>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  
+                    &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                    <img src="img/fechaicon.jpg" />
+                    <asp:Label ID="lblFecha" runat="server" Text=""></asp:Label>
+                </h1>
+            </section>
+            <section class="content">
+                <form id="form1" runat="server">
+                    <asp:ScriptManager ID="scriptManager" runat="server">
+                    </asp:ScriptManager>
+                    <div>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            <!-- CARGAR EL DISEÑO DE LA PAGINA QUE HEREDA DE MASTER PAGE-->
+                        </asp:ContentPlaceHolder>
+                    </div>
+
+                </form>
+            </section>
+        </aside>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <%--<script src="js/jquery.min.js" type="text/javascript"></script>--%>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <%--<script src="js/jquery-ui.min.js" type="text/javascript"></script>--%>
+    <script src="js/AdminLTE/app.js" type="text/javascript"></script>
+    <script src="jAlert/jquery.alerts.js" type="text/javascript"></script>
+    <script src="js/jquery.ui.draggable.js" type="text/javascript"></script>
+
+    <script src="js/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="js/plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="js/logout.js"></script>
+
+    <asp:ContentPlaceHolder ID="footer" runat="server">
+        <div class="footer bg-purple-gradient">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <p class="copy">Todos los derechos Reservados &copy 2020 | MEDREMINDER &reg </p>
+                </div>
+                <div class="col-md-4 ">
+                </div>
+            </div>
+        </div>
+
+    </asp:ContentPlaceHolder>
+</body>
+
+
+</html>
