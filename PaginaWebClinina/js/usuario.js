@@ -186,7 +186,7 @@ $(document).on('click', '.btn-edit', function (e) {
 $(document).on('click', '.btn-delete', function (e) {
 
     e.preventDefault();
-    var rpta = confirm("¿Seguro que quiere eliminar el regisytro?");
+    var rpta = confirm("¿Seguro que quiere eliminar el registro?");
     if (rpta==true) {
         var row = $(this).parent().parent()[0];
         var dataRow = tabla.fnGetData(row);

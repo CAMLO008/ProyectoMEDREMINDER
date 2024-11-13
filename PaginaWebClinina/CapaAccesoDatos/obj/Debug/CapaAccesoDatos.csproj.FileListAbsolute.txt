@@ -34,3 +34,12 @@ C:\Users\Pintuaccesorios\Desktop\Project_Web_Clinica-master\PaginaWebClinina\Cap
 C:\Users\Pintuaccesorios\Desktop\Project_Web_Clinica-master\PaginaWebClinina\CapaAccesoDatos\obj\Debug\CapaAcce.1AD5E18C.Up2Date
 C:\Users\Pintuaccesorios\Desktop\Project_Web_Clinica-master\PaginaWebClinina\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
 C:\Users\Pintuaccesorios\Desktop\Project_Web_Clinica-master\PaginaWebClinina\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaAccesoDatos\bin\Debug\CapaEntidades.dll
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaAccesoDatos\bin\Debug\CapaEntidades.pdb
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.AssemblyReference.cache
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaAccesoDatos\obj\Debug\CapaAcce.1AD5E18C.Up2Date
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb

@@ -21,7 +21,7 @@
                                     <label>DOCUMENTO DE IDENTIDAD</label>
                                 </div>
                                 <div class="input-group">
-                                    <asp:TextBox ID="txtDNI" CssClass="form-control" runat="server" MaxLength="8"></asp:TextBox>
+                                    <asp:TextBox CssClass="form-control" runat="server" MaxLength="10"></asp:TextBox>
                                     <div class="input-group-btn">
                                         <asp:Button ID="btnBuscar" runat="server" CssClass="btn btn-danger" Text="BUSCAR" />
                                     </div>
@@ -112,7 +112,7 @@
                                                 </asp:TemplateField>
                                                 <asp:TemplateField>
                                                     <HeaderTemplate>
-                                                        <asp:Label ID="lblDNIHeader" runat="server" Text="DNI"></asp:Label>
+                                                        <asp:Label ID="lblDNIHeader" runat="server" Text="Documento"></asp:Label>
                                                     </HeaderTemplate>
                                                     <ItemTemplate>
                                                         <asp:Label ID="lblDNI" runat="server" Text='<%#Eval("Medico.NroDocumento") %>'></asp:Label>

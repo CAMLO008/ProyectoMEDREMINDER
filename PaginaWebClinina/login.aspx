@@ -10,7 +10,7 @@
     <link rel="icon" href="img/clinica_318-1538.jpg" />
 </head>
 
-<body style="background-image:url(/img/fondoLogin.jpg)">
+<%--<body style="background-image:url(/img/fondoLogin.jpg)">--%>
     <form id="form1" runat="server">
         <div class="form-box" id="login-box">
             <asp:Login ID="LoginUser" runat="server" EnableViewState="false" OnAuthenticate="LoginUser_Authenticate" Width="100%" Height="600px">

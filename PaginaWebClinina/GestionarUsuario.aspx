@@ -18,7 +18,7 @@
                                     <label>DOCUMENTO DE IDENTIDAD</label>
                                 </div>
                                 <div class="input-group">
-                                    <asp:TextBox ID="txtDNI" CssClass="form-control" runat="server" MaxLength="10"></asp:TextBox>
+                                    <asp:TextBox  CssClass="form-control" runat="server" MaxLength="10"></asp:TextBox>
                                     <div class="input-group-btn">
                                         <asp:Button ID="btnBuscar" runat="server" CssClass="btn btn-danger" Text="BUSCAR" />
                                     </div>
@@ -136,7 +136,6 @@
                                 </tr>
                             </thead>
                             <tbody id="tbl_body_table">
-                                <!-- DATA POR MEDIO DE AJAX-->
                             </tbody>
                         </table>
                     </div>

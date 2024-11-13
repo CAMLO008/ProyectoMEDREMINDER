@@ -17,7 +17,7 @@
                     <div class="box-body">
                         <label>Documento de identidad</label>
                         <div class="input-group">
-                            <asp:TextBox ID="txtDNI" runat="server" CssClass="form-control" MaxLength="10"></asp:TextBox>
+                            <asp:TextBox  runat="server" CssClass="form-control" MaxLength="10"></asp:TextBox>
                             <span class="input-group-btn">
                                 <asp:Button ID="btnBuscar" Text="Buscar" runat="server" CssClass="btn btn-info btn-flat"/>
                             </span>

@@ -53,7 +53,7 @@ $("#btnBuscar").on("click", function (event) {
             }
         });
     } else {
-        alert('No ha ingresado un DNI');
+        alert('No ha ingresado un documento');
         llenarDatosMedicoDefault();
         tabla.fnClearTable();
     }

@@ -42,3 +42,14 @@ C:\Users\Pintuaccesorios\Desktop\Project_Web_Clinica-master\PaginaWebClinina\Cap
 C:\Users\Pintuaccesorios\Desktop\Project_Web_Clinica-master\PaginaWebClinina\CapaLogicaNegocio\obj\Debug\CapaLogi.BF2FE080.Up2Date
 C:\Users\Pintuaccesorios\Desktop\Project_Web_Clinica-master\PaginaWebClinina\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
 C:\Users\Pintuaccesorios\Desktop\Project_Web_Clinica-master\PaginaWebClinina\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.dll
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\bin\Debug\CapaLogicaNegocio.pdb
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\bin\Debug\CapaEntidades.dll
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\bin\Debug\CapaEntidades.pdb
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.csproj.AssemblyReference.cache
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.csproj.CoreCompileInputs.cache
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\obj\Debug\CapaLogi.BF2FE080.Up2Date
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.dll
+C:\Users\CBN\OneDrive\Documentos\ProyectoMEDREMINDER\PaginaWebClinina\CapaLogicaNegocio\obj\Debug\CapaLogicaNegocio.pdb

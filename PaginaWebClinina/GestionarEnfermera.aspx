@@ -25,13 +25,13 @@
                             <asp:TextBox ID="txtNombres" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label>APELLIDO PATERNO</label>
+                            <label>PRIMER APELLIDO</label>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtApPaterno" runat="server" Text="" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-group">
-                            <label>APELLIDO MATERNO</label>
+                            <label>SEGUNDO APELLIDO</label>
                         </div>
                         <div class="form-group">
                             <asp:TextBox ID="txtApMaterno" runat="server" Text="" CssClass="form-control"></asp:TextBox>
